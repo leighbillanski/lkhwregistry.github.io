@@ -30,7 +30,7 @@ jobs:
         run: rm -rf dist/
 
       - name: Build Angular app
-        run: npx ng build --configuration production --base-href "https://leighbillanski.github.io/lkhwregistry.github.io/"
+        run: npx ng build --configuration production
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
