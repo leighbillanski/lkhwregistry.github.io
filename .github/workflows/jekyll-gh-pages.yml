@@ -33,9 +33,8 @@ jobs:
         run: npx ng build --configuration production --base-href "https://leighbillanski.github.io/lkhwregistry.github.io/"
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/lkhwregistry.github.io --branch=gh-pages
-#        uses: JamesIves/github-pages-deploy-action@v4
-#        with:
-#          branch: gh-pages
-#          folder: dist/lkhwregistry.github.io
-#          token: ${{ secrets.GITHUB_TOKEN }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist/lkhwregistry.github.io
+          token: ${{ secrets.GITHUB_TOKEN }}
